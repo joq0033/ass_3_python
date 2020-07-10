@@ -35,3 +35,18 @@ class AbstractCli(ABC):
     @abstractmethod
     def help_diagram(self):
         pass
+
+
+class AbstractSerializer(ABC):
+
+    def __init__(self, file_to_data, data_name):
+        self.file_to_data = file_to_data
+        self.data_name = data_name
+        print('Data dumping...')
+
+    @abstractmethod
+    def make_data(self):
+        pass
+
+    def unmake_data(self):
+        pass

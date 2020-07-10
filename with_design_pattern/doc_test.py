@@ -36,8 +36,8 @@ Quit from this CLI
 Quitting......
 True
 
->>> from builder import Pickle
->>> pm = Pickle('DoctestPickleFile.py','test')
+>>> from PickleMaker import MyPickle
+>>> pm = MyPickle('DoctestPickleFile.py','test')
 Data dumping...
 >>> pm.make_data()
 DoctestPickleFile.py has been stored as test
@@ -46,7 +46,7 @@ DoctestPickleFile.py
 testfile = 1
 <BLANKLINE>
 
->>> from builder import Shelf
+>>> from shelve_create import Shelf
 >>> sc = Shelf('file_to_data', 'data_name')
 Data dumping...
 >>> sc.make_data()

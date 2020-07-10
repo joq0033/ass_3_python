@@ -3,19 +3,19 @@ import DiagramCreator
 from abstract import AbstractCli
 import SQLDatabase
 from abstract import Context
-from builder import Pickle
+from PickleMaker import MyPickle
 
 
 class MyPromptAdjunct(Cmd, object):
 
     def do_pickle(self, inp):
-        Pickle(inp, input('name of pickle file: ')).make_data()
+        MyPickle(inp, input('name of pickle file: ')).make_data()
 
     def help_pickle(self):
         print('pickle [filename], enter file to pickle then the name of the pickle file')
 
     def do_unpickle(self, inp):  # i don't know if this is correct or not
-        Pickle('a', inp).unmake_data()
+        MyPickle('a', inp).unmake_data()
 
     def help_unpickle(self):
         print('unpickle [picklefilename], enter the name of a file that has been pickled')

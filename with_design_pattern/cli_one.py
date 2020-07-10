@@ -5,7 +5,7 @@ import shlex
 import os.path
 from abstract import AbstractCli
 from abstract import Context
-from builder import Shelf
+from shelve_create import Shelf
 
 
 class CliAdjunct(cmd.Cmd, object):
